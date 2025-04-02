@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="" class="btn btn-warning">Edit</a>
+                <a href="{{ route('contactFormEdit', $contact->id) }}" class="btn btn-warning">Edit</a>
                 <form action="" method="POST" style="display:inline;">
                     @csrf
                     @method('DELETE')
