@@ -23,7 +23,7 @@
                     <td>{{ $contact->id }}</td>
                     <td>{{ $contact->name }}</td>
                     <td>
-                    <a href="{{ route('users.show', $contact->id) }}" class="btn btn-info btn-sm">Details</a>
+                    <a href="{{ route('contactDetails', $contact->id) }}" class="btn btn-info btn-sm">Details</a>
                     <a href="" class="btn btn-warning btn-sm">Edit</a>
                     <form action="" method="POST" style="display:inline;">
                         @csrf

@@ -31,9 +31,9 @@ class ContactController extends Controller
         return redirect()->route('index')->with('success', 'Contact added successfully!');
     }
 
-    public function edit($id){
+    public function show($id){
         $contact = Contact::findOrFail($id);
-        return view('contactsForm', compact('contact'));
+        return view('contactDetails', compact('contact'));
     }
     
     public function update(Request $request, $id)

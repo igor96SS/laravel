@@ -18,7 +18,7 @@
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h5 class="card-title">Name </h5>
-                                <p class="card-text"><strong>name</strong> </p>
+                                <p class="card-text"><strong>{{ $contact->name }}</strong> </p>
                             </div>
                         </div>
                     </div>
@@ -30,7 +30,7 @@
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h5 class="card-title">Contact </h5>
-                                <p class="card-text"><strong>9111</strong> </p>
+                                <p class="card-text"><strong>{{ $contact->contact }}</strong> </p>
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h5 class="card-title">Email Address </h5>
-                                <p class="card-text"><strong>email</strong> </p>
+                                <p class="card-text"><strong>{{ $contact->email }}</strong> </p>
                             </div>
                         </div>
                     </div>

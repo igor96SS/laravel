@@ -15,9 +15,7 @@ use App\Http\Controllers\ContactController;
 
 Route::get('/', [ContactController::class, 'index'])->name("index");
 
-Route::get('/contactDetails', function () {
-    return view('contactDetails');
-})->name("contactDetails");
+Route::get('/contactDetails/{id}', [ContactController::class, 'show'])->name("contactDetails");
 
 Route::get('/contactForm', function () {
     return view('contactForm');
