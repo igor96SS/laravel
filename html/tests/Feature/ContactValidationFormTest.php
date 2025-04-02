@@ -8,9 +8,11 @@ use Tests\TestCase;
 
 class ContactValidationFormTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     */
+ 
+
+     /* All tests should fail
+        Insert Data is wrong on purposes */
+
     public function test_name_is_required(): void
     {
         $response = $this->post('/contacts', [
