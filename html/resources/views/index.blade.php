@@ -25,7 +25,7 @@
                     <td>
                     <a href="{{ route('contactDetails', $contact->id) }}" class="btn btn-info btn-sm">Details</a>
                     <a href="{{ route('contactFormEdit', $contact->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                    <form action="" method="POST" style="display:inline;">
+                    <form action="{{ route('contacts.destroy', $contact->id) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</button>

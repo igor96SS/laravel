@@ -21,3 +21,6 @@ Route::get('/contactForm/{id?}', [ContactController::class,'form'])->name("conta
 
 Route::post('/contactForm', [ContactController::class, 'store'])->name('contacts.store');
 Route::put('/contactForm/{id}', [ContactController::class, 'update'])->name('contacts.update');
+
+
+Route::delete('/contacts/{id}', [ContactController::class,'destroy'])->name('contacts.destroy');
