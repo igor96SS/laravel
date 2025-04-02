@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="{{ route('contactFormEdit', $contact->id) }}" class="btn btn-warning">Edit</a>
+                <a href="{{ route('contactForm', $contact->id) }}" class="btn btn-warning">Edit</a>
                 <form action="{{ route('contacts.destroy', $contact->id) }}" method="POST" style="display:inline;">
                     @csrf
                     @method('DELETE')
