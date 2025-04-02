@@ -15,11 +15,12 @@ use App\Http\Controllers\ContactController;
 
 Route::get('/', [ContactController::class, 'index'])->name("index");
 
-Route::get('/contactDetails', function () {
-    return view('contactDetails');
-})->name("contactDetails");
+Route::get('/contactDetails/{id}', [ContactController::class, 'show'])->name("contactDetails");
 
-Route::get('/contactForm', function () {
-    return view('contactForm');
-})->name("contactForm");
+Route::get('/contactForm/{id?}', [ContactController::class,'form'])->name("contactForm");
 
+Route::post('/contactForm', [ContactController::class, 'store'])->name('contacts.store');
+Route::put('/contactForm/{id}', [ContactController::class, 'update'])->name('contacts.update');
+
+
+Route::delete('/contacts/{id}', [ContactController::class,'destroy'])->name('contacts.destroy');

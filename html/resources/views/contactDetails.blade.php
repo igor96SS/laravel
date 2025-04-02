@@ -18,7 +18,7 @@
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h5 class="card-title">Name </h5>
-                                <p class="card-text"><strong>name</strong> </p>
+                                <p class="card-text"><strong>{{ $contact->name }}</strong> </p>
                             </div>
                         </div>
                     </div>
@@ -30,7 +30,7 @@
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h5 class="card-title">Contact </h5>
-                                <p class="card-text"><strong>9111</strong> </p>
+                                <p class="card-text"><strong>{{ $contact->contact }}</strong> </p>
                             </div>
                         </div>
                     </div>
@@ -38,13 +38,13 @@
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h5 class="card-title">Email Address </h5>
-                                <p class="card-text"><strong>email</strong> </p>
+                                <p class="card-text"><strong>{{ $contact->email }}</strong> </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a href="" class="btn btn-warning">Edit</a>
-                <form action="" method="POST" style="display:inline;">
+                <a href="{{ route('contactForm', $contact->id) }}" class="btn btn-warning">Edit</a>
+                <form action="{{ route('contacts.destroy', $contact->id) }}" method="POST" style="display:inline;">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</button>

@@ -8,7 +8,8 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h2 class="mb-4">Contacts List</h2>
+        <h2 class="mb-2">Contacts List</h2>
+        <a href="{{ route('contactForm') }}" class="btn btn-primary mb-2">Add new contact</a>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -23,9 +24,9 @@
                     <td>{{ $contact->id }}</td>
                     <td>{{ $contact->name }}</td>
                     <td>
-                    <a href="{{ route('users.show', $contact->id) }}" class="btn btn-info btn-sm">Details</a>
-                    <a href="" class="btn btn-warning btn-sm">Edit</a>
-                    <form action="" method="POST" style="display:inline;">
+                    <a href="{{ route('contactDetails', $contact->id) }}" class="btn btn-info btn-sm">Details</a>
+                    <a href="{{ route('contactForm', $contact->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                    <form action="{{ route('contacts.destroy', $contact->id) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</button>
