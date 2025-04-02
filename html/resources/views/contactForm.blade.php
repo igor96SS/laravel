@@ -29,6 +29,7 @@
                 <form action="{{ $contact ? route('contacts.update', $contact->id) : route('contacts.store') }}" method="post">
                     @csrf
                     @if($contact) @method('PUT') @endif
+                    
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-12">
