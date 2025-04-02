@@ -19,7 +19,7 @@
                                 <div class="card mb-3">
                                     <div class="card-body">
                                         <h5 class="card-title">Name</h5>
-                                        <input type="text" class="form-control" id="contactName" aria-describedby="emailHelp" placeholder="Enter name">
+                                        <input type="text" class="form-control" id="contactName" name="contactName" aria-describedby="emailHelp" placeholder="Enter name">
                                     </div>
                                 </div>
                             </div>
@@ -30,7 +30,7 @@
                                     <div class="card mb-3">
                                         <div class="card-body">
                                             <h5 class="card-title">Email address </h5>
-                                            <input type="email" class="form-control" id="contactEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                                            <input type="email" class="form-control" id="contactEmail" name="contactEmail" aria-describedby="emailHelp" placeholder="Enter email">
                                         </div>
                                     </div>
                                 </div>
@@ -39,7 +39,7 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <h5 class="card-title">Contact</h5>
-                                            <input type="tel" class="form-control" id="contactphone" placeholder="Enter Phone Number">
+                                            <input type="tel" class="form-control" id="contactphone" name="contactphone" placeholder="Enter Phone Number">
                                         </div>
                                     </div>
                                 </div>
