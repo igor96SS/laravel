@@ -8,6 +8,17 @@
 </head>
 <body>
     <div class="container mt-5">
+
+    @if(auth()->check())
+        <form action="{{ route('logout') }}" method="POST" style="display:inline;">
+            @csrf
+            <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+        </form>
+    @else
+        <a href="{{ route('login') }}" class="btn btn-primary btn-sm">Login</a>
+    @endif
+
+
         <h2 class="mb-2">Contacts List</h2>
         <a href="{{ route('contactForm') }}" class="btn btn-primary mb-2">Add new contact</a>
         <table class="table table-bordered">
