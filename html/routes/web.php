@@ -17,7 +17,7 @@ Route::get('/', [ContactController::class, 'index'])->name("index");
 
 Route::get('/contactDetails/{id}', [ContactController::class, 'show'])->name("contactDetails");
 
-Route::get('/contactForm', function () {
-    return view('contactForm');
-})->name("contactForm");
+Route::get('/contactForm/{id?}', [ContactController::class,'form'])->name("contactFormEdit");
 
+Route::post('/contactForm', [ContactController::class, 'store'])->name('contacts.store');
+Route::put('/contactForm/{id}', [ContactController::class, 'update'])->name('contacts.update');

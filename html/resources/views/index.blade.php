@@ -24,7 +24,7 @@
                     <td>{{ $contact->name }}</td>
                     <td>
                     <a href="{{ route('contactDetails', $contact->id) }}" class="btn btn-info btn-sm">Details</a>
-                    <a href="" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="{{ route('contactFormEdit', $contact->id) }}" class="btn btn-warning btn-sm">Edit</a>
                     <form action="" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
